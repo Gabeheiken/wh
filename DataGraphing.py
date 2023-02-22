@@ -19,6 +19,8 @@ for i, row in df.iterrows():
     I.append(df.iloc[i,10]/240)
     date.append(df.iloc[i,0])
     time.append(date[i][10:19])
+    if i > 721: # 721 data points for 12 hours, any data beyond 721 in the csv is ignored
+        break
 
 print(time)
 # flow = [0,0,0,0,0,0,0,2,2,2,2,2,2,2,2,2,2,2,2]
